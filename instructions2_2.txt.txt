@@ -1,0 +1,9 @@
+Il s'agit ici des étapes suivies pour résoudre cette situation.
+1-On commence par créer la repo "repo-gei311-lab1-partie2-2-Laurier_Fofack" et à le clone comme à la partie 1 (avec la commande "git clone")
+2-On crée ensuite le fichier testA.txt dans Dossier_A, puis, on fait un commit et le synchronise avec GitHub avec les commandes : "git add --a", "git commit -m ...", "git push origin dev_laurier"
+3- membre B clone le repo de membre A avec la commande "git clone", ensuite crée un dossier (Dossier_B) contenant le fichier (testB.txt), puis fait un commit en utilisant les commandes : "git add Dossier_B/testB.txt" et "git commit -m"
+4- membre B injecte une erreur dans le fichier testA.txt contenu dans Dossier_A, puis fait un commit pour cette modification. On peut le faire en utilisant la commande "git commit -am "ajout de la ligne 'erreur injectée'"" 
+5- membre A détecte l'erreur et crée une issue sur GitHub (en cliquant sur issue et ensuite, new issue). Le membre B y répond. Pour avoir l'historique des commits, on utilise la commande "git log"
+6- membre A retourne à la version erronée en utilisant "git reset --hard 'numero du commit'" et le déploie
+7- membre B prend connaissance de la version erronée et utilise aussi la même commande pour revenir au commit avant ce commit la. On utilise la commande "git reset --hard" au lieu de "git revert" parce que "git reset" permet de supprimer les modifications apportées, et de les refaire contrairement à "git revert" qui revient au dernier commit fonctionnel et conserve quand même les autres modifications effectuées. Puisque le laboratoire veut que l'erreur soit supprimée, on a donc choisit de d'utiliser "git reset"
+8- Par la suite, on refait la modification et enfin on déploie.
